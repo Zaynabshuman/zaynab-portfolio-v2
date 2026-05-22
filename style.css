@@ -255,5 +255,44 @@ footer {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
+  /* EXPERIENCE PAGE */
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd3c7;
+}
+
+.experience-meta span {
+  font-size: 14px;
+  color: #8a7563;
+  letter-spacing: 1px;
+}
+
+.experience-org {
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.experience-content p {
+  max-width: 700px;
+}
+
+@media (max-width: 768px) {
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+}
 
 }
