@@ -315,3 +315,28 @@ footer {
   font-size: 14px;
   letter-spacing: 1px;
 }
+/* CONTACT PAGE */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.contact-item {
+  padding-top: 24px;
+  border-top: 1px solid #1e1e1e;
+}
+
+.contact-item p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
