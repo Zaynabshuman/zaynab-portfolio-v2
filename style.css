@@ -34,10 +34,12 @@ nav{
 
 .brand span{
   display:block;
-  font-size:13px;
+  font-family:'Segoe UI', sans-serif;
+  font-size:14px;
   font-weight:500;
-  margin-top:4px;
-  color:#5d7a7a;
+  margin-top:18px;
+  color:#6f7f7f;
+  letter-spacing:0.3px;
 }
 
 .nav-links{
