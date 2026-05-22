@@ -296,3 +296,22 @@ footer {
 }
 
 }
+/* TESTIMONIALS PAGE */
+
+.testimonials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.testimonial-item {
+  padding-top: 30px;
+  border-top: 1px solid #ddd3c7;
+}
+
+.testimonial-author {
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
