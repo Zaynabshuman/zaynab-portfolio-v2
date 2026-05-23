@@ -8,8 +8,6 @@
   --green: #087667;
   --green-dark: #055f54;
   --sage: #dfeee9;
-  --sage-light: #f1f7f4;
-  --beige: #f6f1ea;
   --warm-white: #fbfaf7;
   --ink: #1f2523;
   --muted: #67726e;
@@ -81,11 +79,17 @@ body {
   display: grid;
   grid-template-columns: 43% 57%;
   align-items: center;
-  padding: 50px 7% 90px;
-  background:
-    radial-gradient(circle at 78% 48%, rgba(223, 238, 233, 0.9) 0%, rgba(223, 238, 233, 0.55) 30%, transparent 55%),
-    var(--warm-white);
+  padding: 45px 7% 90px;
   overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 74% 52%,
+      rgba(226, 236, 228, 0.95) 0%,
+      rgba(226, 236, 228, 0.75) 24%,
+      rgba(226, 236, 228, 0.3) 39%,
+      transparent 56%
+    ),
+    var(--warm-white);
 }
 
 .hero-copy {
@@ -93,7 +97,6 @@ body {
   z-index: 2;
 }
 
-.eyebrow,
 .section-tag {
   display: inline-block;
   margin-bottom: 22px;
@@ -101,7 +104,7 @@ body {
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--teal-muted, #7faea4);
+  color: #7faea4;
 }
 
 .hero-copy h1 {
@@ -164,12 +167,14 @@ body {
 }
 
 .hero-visual img {
-  width: 88%;
-  max-width: 620px;
+  width: 92%;
+  max-width: 680px;
   max-height: 720px;
-  object-fit: cover;
-  object-position: center top;
-  filter: saturate(96%);
+  object-fit: contain;
+  object-position: center bottom;
+  position: relative;
+  z-index: 2;
+  filter: saturate(96%) contrast(101%);
 }
 
 /* ABOUT */
@@ -246,7 +251,6 @@ body {
 
 .highlight-item {
   padding: 34px 34px 20px 0;
-  border-top: 1px solid transparent;
 }
 
 .highlight-item strong {
