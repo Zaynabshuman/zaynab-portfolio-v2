@@ -23,63 +23,65 @@ body {
 }
 
 /* =========================
-   HEADER
-========================= */
+ /* HEADER */
 
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 34px 7% 18px;
-  background: var(--warm);
+  align-items: center;
+  padding: 46px 7% 34px;
+  background:
+    radial-gradient(circle at 98% 0%, rgba(180, 170, 230, 0.18) 0%, transparent 22%),
+    var(--warm);
 }
 
 .brand a {
+  display: block;
   text-decoration: none;
-  color: var(--ink);
-  font-size: 46px;
-  font-weight: 500;
-  letter-spacing: -1px;
-  line-height: 0.95;
+  color: #050505;
+  font-family: "Cormorant Garamond", Cambria, Georgia, serif;
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 0.9;
 }
 
 .brand span {
   display: block;
-  margin-top: 14px;
-  max-width: 420px;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  line-height: 1.7;
-  letter-spacing: 1.8px;
+  margin-top: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #1f2523;
 }
 
 .nav-links {
-  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 58px;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 .nav-links a {
-  margin-left: 28px;
+  margin-left: 0;
   text-decoration: none;
-  color: var(--ink);
-  font-family: Arial, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  transition: 0.3s ease;
+  color: #1f2523;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.nav-links a.active {
+  color: #1f2523;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .nav-links a:hover {
   color: var(--green);
 }
-
-.nav-links a.active {
-  color: var(--green);
-  border-bottom: 1px solid var(--green);
-  padding-bottom: 7px;
-}
-
 /* =========================
    HERO
 ========================= */
