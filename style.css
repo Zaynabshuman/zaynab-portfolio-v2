@@ -127,16 +127,16 @@ body {
 
 .hero-image {
   position: relative;
-  height: 700px;
+  height: 860px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
 .profile-pic {
-  width: 86%;
-  max-width: 690px;
-  max-height: 700px;
+  width: 118%;
+  max-width: 980px;
+  max-height: 920px;
   object-fit: contain;
   position: relative;
   z-index: 2;
