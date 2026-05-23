@@ -6,11 +6,10 @@
 
 :root {
   --green: #087667;
-  --warm: #fbfaf7;
-  --sage: #e8f0ea;
+  --warm: #ffffff;
+  --soft: #f6faf7;
   --ink: #111111;
-  --muted: #5f6663;
-  --line: #dbe3de;
+  --line: #dce4df;
 }
 
 body {
@@ -25,11 +24,9 @@ body {
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 42px 7%;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(192, 180, 230, 0.15) 0%, transparent 24%),
-    var(--warm);
+  align-items: flex-start;
+  padding: 44px 7% 30px;
+  background: #ffffff;
 }
 
 .brand a {
@@ -43,19 +40,20 @@ body {
 
 .brand span {
   display: block;
-  margin-top: 14px;
+  margin-top: 16px;
+  max-width: 560px;
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 12px;
-  line-height: 1.6;
-  letter-spacing: 3px;
+  line-height: 1.7;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
   color: var(--ink);
-  max-width: 520px;
 }
 
 .nav-links {
   display: flex;
   gap: 42px;
+  padding-top: 10px;
   font-family: "Montserrat", Arial, sans-serif;
 }
 
@@ -77,39 +75,45 @@ body {
 .hero {
   min-height: 760px;
   display: grid;
-  grid-template-columns: 44% 56%;
+  grid-template-columns: 42% 58%;
   align-items: center;
-  padding: 20px 7% 0;
-  background:
-    radial-gradient(circle at 74% 50%, rgba(232, 240, 234, 1) 0%, rgba(232, 240, 234, 0.7) 28%, transparent 52%),
-    var(--warm);
+  padding: 25px 7% 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
 }
 
 .hero-text h1 {
   color: var(--green);
-  font-size: 72px;
+  font-size: 78px;
+  font-weight: 600;
   line-height: 1;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .hero-text p {
-  font-size: 28px;
+  max-width: 570px;
+  font-size: 29px;
   line-height: 1.55;
-  max-width: 560px;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
 
 .hero-buttons {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
 }
 
 .main-btn {
   background: var(--green);
   color: white;
   text-decoration: none;
-  padding: 16px 34px;
+  padding: 16px 36px;
   border-radius: 6px;
   font-size: 20px;
   font-weight: 600;
@@ -122,18 +126,36 @@ body {
 }
 
 .hero-image {
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 700px;
+  position: relative;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  width: 360px;
+  height: 620px;
+  background-image: url("data:image/svg+xml,%3Csvg width='360' height='620' viewBox='0 0 360 620' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23087667' stroke-width='2' opacity='0.55'%3E%3Cpath d='M190 610 C185 500 205 390 225 280 C240 190 255 110 300 20'/%3E%3Cpath d='M165 610 C160 500 165 390 180 280 C195 180 205 105 220 30'/%3E%3Cpath d='M120 610 C130 500 135 405 130 300 C125 200 105 110 80 40'/%3E%3Cpath d='M220 360 C260 330 300 290 330 230'/%3E%3Cpath d='M190 430 C145 390 105 345 70 280'/%3E%3C/g%3E%3Cg fill='%23087667' opacity='0.42'%3E%3Cellipse cx='292' cy='78' rx='13' ry='34' transform='rotate(28 292 78)'/%3E%3Cellipse cx='270' cy='115' rx='12' ry='30' transform='rotate(35 270 115)'/%3E%3Cellipse cx='252' cy='155' rx='11' ry='28' transform='rotate(35 252 155)'/%3E%3Cellipse cx='235' cy='195' rx='10' ry='26' transform='rotate(35 235 195)'/%3E%3Cellipse cx='218' cy='235' rx='10' ry='24' transform='rotate(35 218 235)'/%3E%3Cellipse cx='215' cy='82' rx='11' ry='28' transform='rotate(12 215 82)'/%3E%3Cellipse cx='205' cy='125' rx='11' ry='27' transform='rotate(15 205 125)'/%3E%3Cellipse cx='195' cy='170' rx='10' ry='25' transform='rotate(15 195 170)'/%3E%3Cellipse cx='185' cy='215' rx='10' ry='24' transform='rotate(15 185 215)'/%3E%3Cellipse cx='82' cy='100' rx='12' ry='31' transform='rotate(-22 82 100)'/%3E%3Cellipse cx='96' cy='145' rx='11' ry='28' transform='rotate(-22 96 145)'/%3E%3Cellipse cx='110' cy='190' rx='10' ry='26' transform='rotate(-22 110 190)'/%3E%3Cellipse cx='122' cy='235' rx='10' ry='24' transform='rotate(-22 122 235)'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  z-index: 1;
 }
 
 .hero-image img {
-  width: 90%;
-  max-width: 700px;
+  width: 92%;
+  max-width: 720px;
   max-height: 700px;
   object-fit: contain;
-  filter: brightness(1.08) contrast(0.96) saturate(0.92);
+  object-position: center bottom;
+  position: relative;
+  z-index: 2;
+  filter: brightness(1.08) contrast(0.96) saturate(0.95);
 }
 
 /* ABOUT */
@@ -144,7 +166,8 @@ body {
   gap: 70px;
   align-items: center;
   padding: 90px 10%;
-  background: linear-gradient(to bottom, #f4f8f5, #eef5f2);
+  background: #f6faf7;
+  border-top: 1px solid #edf3ef;
 }
 
 .about-photo {
@@ -159,19 +182,31 @@ body {
   width: 250px;
   height: 310px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 10px;
+  background: #ffffff;
 }
 
 .about-text h2 {
   color: var(--green);
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 18px;
 }
 
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 3px;
+  background: #b8d8cf;
+  margin-top: 14px;
+}
+
 .about-text p {
+  max-width: 850px;
   font-size: 25px;
   line-height: 1.6;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .read-btn {
@@ -179,7 +214,7 @@ body {
   background: var(--green);
   color: white;
   text-decoration: none;
-  padding: 15px 34px;
+  padding: 15px 36px;
   border-radius: 6px;
   font-size: 20px;
 }
@@ -188,13 +223,13 @@ body {
 
 .highlights {
   padding: 100px 10%;
-  background: var(--warm);
+  background: #ffffff;
   text-align: center;
 }
 
 .highlights h2 {
   color: var(--green);
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 60px;
 }
 
@@ -228,10 +263,8 @@ body {
 /* MOBILE */
 
 @media (max-width: 1000px) {
-
   .site-header {
     flex-direction: column;
-    align-items: flex-start;
     gap: 24px;
   }
 
@@ -248,6 +281,12 @@ body {
   .hero-image {
     height: auto;
     margin-top: 40px;
+  }
+
+  .hero-image::after {
+    width: 240px;
+    height: 420px;
+    right: 0;
   }
 
   .about-preview {
