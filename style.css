@@ -6,15 +6,14 @@
 
 :root {
   --green: #087667;
-  --warm: #fbfaf7;
-  --sage: #e8f0ea;
+  --white: #ffffff;
+  --soft: #f6faf7;
   --ink: #111111;
-  --muted: #5f6663;
   --line: #dbe3de;
 }
 
 body {
-  background: var(--warm);
+  background: var(--white);
   color: var(--ink);
   overflow-x: hidden;
   font-family: "Cormorant Garamond", Georgia, serif;
@@ -25,8 +24,8 @@ body {
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 42px 7%;
+  align-items: flex-start;
+  padding: 44px 7% 34px;
   background: #ffffff;
 }
 
@@ -41,19 +40,20 @@ body {
 
 .brand span {
   display: block;
-  margin-top: 14px;
+  margin-top: 16px;
+  max-width: 560px;
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 12px;
-  line-height: 1.6;
-  letter-spacing: 3px;
+  line-height: 1.7;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
   color: var(--ink);
-  max-width: 520px;
 }
 
 .nav-links {
   display: flex;
   gap: 42px;
+  padding-top: 10px;
   font-family: "Montserrat", Arial, sans-serif;
 }
 
@@ -75,39 +75,45 @@ body {
 .hero {
   min-height: 760px;
   display: grid;
-  grid-template-columns: 44% 56%;
+  grid-template-columns: 43% 57%;
   align-items: center;
   padding: 20px 7% 0;
-  background:
-    radial-gradient(circle at 74% 50%, rgba(232, 240, 234, 1) 0%, rgba(232, 240, 234, 0.7) 28%, transparent 52%),
-    var(--warm);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
 }
 
 .hero-text h1 {
   color: var(--green);
-  font-size: 72px;
-  line-height: 1;
-  margin-bottom: 24px;
+  font-size: 78px;
+  font-weight: 600;
+  line-height: 0.95;
+  margin-bottom: 28px;
 }
 
 .hero-text p {
-  font-size: 28px;
+  max-width: 570px;
+  font-size: 29px;
   line-height: 1.55;
-  max-width: 560px;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
 
 .hero-buttons {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 34px;
 }
 
 .main-btn {
+  display: inline-block;
   background: var(--green);
   color: white;
   text-decoration: none;
-  padding: 16px 34px;
+  padding: 16px 36px;
   border-radius: 6px;
   font-size: 20px;
   font-weight: 600;
@@ -116,43 +122,34 @@ body {
 .resume-link {
   color: var(--ink);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .hero-image {
   position: relative;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 760px;
 }
 
 .profile-pic {
-  width: 100%;
-  max-width: 760px;
-  max-height: 760px;
+  width: 86%;
+  max-width: 690px;
+  max-height: 700px;
   object-fit: contain;
   position: relative;
   z-index: 2;
-  filter: brightness(1.06) contrast(0.97) saturate(0.94);
+  filter: brightness(1.07) contrast(0.97) saturate(0.94);
 }
 
 .botanical {
   position: absolute;
-  right: 110px;
-  bottom: 70px;
-  width: 240px;
-  opacity: 0.18;
+  right: 25px;
+  bottom: 55px;
+  width: 340px;
+  opacity: 0.32;
   z-index: 1;
-}
-
-.botanical {
-  position: absolute;
-  right: 80px;
-  bottom: 80px;
-  width: 260px;
-  opacity: 1;
-  z-index: 5;
 }
 
 /* ABOUT */
@@ -163,7 +160,8 @@ body {
   gap: 70px;
   align-items: center;
   padding: 90px 10%;
-  background: linear-gradient(to bottom, #f4f8f5, #eef5f2);
+  background: var(--soft);
+  border-top: 1px solid #eef3f0;
 }
 
 .about-photo {
@@ -178,19 +176,31 @@ body {
   width: 250px;
   height: 310px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 10px;
+  background: white;
 }
 
 .about-text h2 {
   color: var(--green);
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 18px;
 }
 
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 3px;
+  background: #b8d8cf;
+  margin-top: 14px;
+}
+
 .about-text p {
+  max-width: 850px;
   font-size: 25px;
   line-height: 1.6;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .read-btn {
@@ -198,7 +208,7 @@ body {
   background: var(--green);
   color: white;
   text-decoration: none;
-  padding: 15px 34px;
+  padding: 15px 36px;
   border-radius: 6px;
   font-size: 20px;
 }
@@ -207,13 +217,13 @@ body {
 
 .highlights {
   padding: 100px 10%;
-  background: var(--warm);
+  background: #ffffff;
   text-align: center;
 }
 
 .highlights h2 {
   color: var(--green);
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 60px;
 }
 
@@ -247,10 +257,8 @@ body {
 /* MOBILE */
 
 @media (max-width: 1000px) {
-
   .site-header {
     flex-direction: column;
-    align-items: flex-start;
     gap: 24px;
   }
 
@@ -267,6 +275,12 @@ body {
   .hero-image {
     height: auto;
     margin-top: 40px;
+  }
+
+  .botanical {
+    right: 0;
+    bottom: 20px;
+    width: 220px;
   }
 
   .about-preview {
