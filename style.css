@@ -68,9 +68,10 @@
 
 .wheat {
   position: absolute;
-  right: -20px;
-  bottom: 0;
-  width: 300px;
-  opacity: 0.32;
+  right: 40px;
+  bottom: 30px;
+  width: 180px;
+  opacity: 0.14;
   z-index: 1;
+  filter: grayscale(100%);
 }
