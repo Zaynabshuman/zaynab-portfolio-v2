@@ -147,8 +147,8 @@ body {
   position: absolute;
   right: -40px;
   bottom: 20px;
-  width: 620px;
-  height: 720px;
+  width: 720px;
+  height: 920px;
   object-fit: contain;
   opacity: 0.28;
   z-index: 1;
