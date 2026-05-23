@@ -145,10 +145,10 @@ body {
 
 .botanical {
   position: absolute;
-  right: -40px;
+  right: -60px;
   bottom: 20px;
-  width: 720px;
-  height: 920px;
+  width: 920px;
+  height: 1100px;
   object-fit: contain;
   opacity: 0.28;
   z-index: 1;
