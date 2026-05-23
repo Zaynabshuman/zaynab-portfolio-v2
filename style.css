@@ -124,17 +124,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 700px;
+  height: 760px;
 }
 
 .profile-pic {
-  width: 90%;
-  max-width: 700px;
-  max-height: 700px;
+  width: 100%;
+  max-width: 760px;
+  max-height: 760px;
   object-fit: contain;
   position: relative;
   z-index: 2;
-  filter: brightness(1.08) contrast(0.96) saturate(0.92);
+  filter: brightness(1.06) contrast(0.97) saturate(0.94);
+}
+
+.botanical {
+  position: absolute;
+  right: 110px;
+  bottom: 70px;
+  width: 240px;
+  opacity: 0.18;
+  z-index: 1;
 }
 
 .botanical {
