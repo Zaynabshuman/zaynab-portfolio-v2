@@ -141,11 +141,11 @@ body {
 
 .botanical {
   position: absolute;
-  right: 95px;
-  bottom: 65px;
-  width: 170px;
-  opacity: 0.18;
-  z-index: 3;
+  right: 80px;
+  bottom: 80px;
+  width: 260px;
+  opacity: 1;
+  z-index: 5;
 }
 
 /* ABOUT */
