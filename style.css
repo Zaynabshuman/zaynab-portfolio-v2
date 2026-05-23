@@ -27,9 +27,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 42px 7%;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(192, 180, 230, 0.15) 0%, transparent 24%),
-    var(--warm);
+  background: #ffffff;
 }
 
 .brand a {
