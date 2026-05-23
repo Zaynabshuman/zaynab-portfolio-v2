@@ -146,7 +146,7 @@ body {
 .botanical {
   position: absolute;
   right: -60px;
-  bottom: -20px;
+  bottom: 40px;
   width: 920px;
   height: 1100px;
   object-fit: contain;
